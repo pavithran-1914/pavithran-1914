@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    .layout{
+        display: grid;
+        grid-template-columns: repeat(5, 1fr);
+        gap: 20px;
+        grid-template-areas: 'h h h h h'
+        'sb1 m m m sb2''f f f f f';
+        grid-template-rows: 10vh 70vh 20vh;
+    }
+    .head{
+        background-color: bisque;
+        grid-area: h;
+        text-align: center;
+    }
+    .sidebar1{
+        background-color: violet;
+        grid-area: sb1;
+        text-align: center;
+    }
+    .main{
+        background-color: blue;
+        grid-area: m;
+        text-align: center;
+    }
+    .sidebar2{
+        background-color: skyblue;
+        grid-area: sb2;
+        text-align: center;
+    }
+    .foot{
+        background-color: magenta;
+        grid-area: f;
+        text-align: center;
+    }
+    .layout div{
+        font-size: 2em;
+        border: 2px solid black;
+        box-shadow: 10px 10px 10px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+</style>
+<body>
+    <div class="layout">
+        <div class="head"> Header</div>
+        <div class="sidebar1"> sidebar1</div>
+        <div class="main"> Main Menu</div>
+        <div class="sidebar2"> sidebar2</div>
+        <div class="foot"> Footer</div>
+    </div>
+</body>
+</html>
